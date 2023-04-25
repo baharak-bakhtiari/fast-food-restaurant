@@ -5,10 +5,10 @@ const instance = axios.create({
   baseURL: "https://react-mini-projects-api.classbon.com",
 });
 
-const useAxios = ( axiosParams ) => {
+const useAxios = (axiosParams) => {
   const [loading, setLoading] = useState(true);
-  const [response, setResponse] = useState([]);
   const [error, setError] = useState("");
+  const [response, setResponse] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -25,7 +25,7 @@ const useAxios = ( axiosParams ) => {
     fetchData();
   }, [axiosParams.url]);
 
-  return [loading, response, error];
+  return [loading, error, response];
 };
 
 export default useAxios;

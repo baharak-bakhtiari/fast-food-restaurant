@@ -1,4 +1,5 @@
 import MenuItem from "../MenuItem/menuItem";
+import PropTypes from "prop-types";
 
 const MenuItems = ({ menuItems }) => {
   return (
@@ -10,6 +11,10 @@ const MenuItems = ({ menuItems }) => {
       ))}
     </div>
   );
+};
+
+MenuItems.propTypes = {
+  menuItems: PropTypes.array.isRequired,
 };
 
 export default MenuItems;

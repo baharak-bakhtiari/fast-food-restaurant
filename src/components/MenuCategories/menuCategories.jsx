@@ -1,8 +1,9 @@
 import Loading from "../Loading/loading";
 import useAxios from "../useAxios/useAxios";
+import PropTypes from "prop-types";
 
-const MenuCategories = () => {
-  const [loading, categories] = useAxios({ url: "/FoodCategory/categories" });
+const MenuCategories = ({ filterItems }) => {
+  const [loading, , categories] = useAxios({ url: "/FoodCategory/categories" });
   const renderContent = () => {
     if (loading) return <Loading color={"dark-gray"} />;
     return (
@@ -12,13 +13,17 @@ const MenuCategories = () => {
       >
         <div className="justify-content-center align-items-center">
           <ul className="nav">
-            <li className="nav-item">
+            <li className="nav-item" onClick={() => filterItems()}>
               <a href="#." className="nav-link">
                 همه فست فودها
               </a>
             </li>
             {categories.map((category) => (
-              <li className="nav-item" key={category.id}>
+              <li
+                className="nav-item"
+                key={category.id}
+                onClick={() => filterItems(category.id)}
+              >
                 <a className="nav-link" href="#.">
                   {category.name}
                 </a>
@@ -30,6 +35,10 @@ const MenuCategories = () => {
     );
   };
   return <nav className="container mt-5">{renderContent()}</nav>;
+};
+
+MenuCategories.propTypes = {
+  filterItems: PropTypes.object.isRequired,
 };
 
 export default MenuCategories;

@@ -1,4 +1,5 @@
 import { HiShoppingCart } from "react-icons/hi";
+import PropTypes from "prop-types";
 
 const MenuItem = ({ name, price, ingredients, imageUrl }) => {
   return (
@@ -17,6 +18,13 @@ const MenuItem = ({ name, price, ingredients, imageUrl }) => {
       </div>
     </div>
   );
+};
+
+MenuItem.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  ingredients: PropTypes.string.isRequired,
 };
 
 export default MenuItem;

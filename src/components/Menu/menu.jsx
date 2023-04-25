@@ -6,7 +6,12 @@ import Loading from "../Loading/loading";
 
 const Menu = () => {
   const [url, setUrl] = useState("/FastFood/list");
-  const [loading, menuItems] = useAxios({ url });
+  const [loading, , menuItems] = useAxios({ url });
+
+  const filterItems = (categoryId) => {
+    setUrl(`/FastFood/list${categoryId ? "?categoryID=" + categoryId : ""}
+`);
+  };
 
   const renderContent = () => {
     if (loading) return <Loading />;
@@ -15,7 +20,7 @@ const Menu = () => {
 
   return (
     <div>
-      <MenuCategories />
+      <MenuCategories filterItems={filterItems}></MenuCategories>
       <div>{renderContent()}</div>
     </div>
   );

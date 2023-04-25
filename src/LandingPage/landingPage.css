@@ -1,0 +1,16 @@
+.hamburger {
+  max-width: 600px;
+}
+
+.buttons {
+  background-color: orange;
+  color: white;
+}
+
+.buttons:hover {
+  background-color: rgba(245, 170, 31, 0.781);
+}
+
+.buttons-outline:hover {
+  background-color: orange;
+}

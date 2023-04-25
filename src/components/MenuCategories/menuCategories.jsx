@@ -2,13 +2,13 @@ import Loading from "../Loading/loading";
 import useAxios from "../useAxios/useAxios";
 import PropTypes from "prop-types";
 
-const MenuCategories = ({ filterItems }) => {
+const MenuCategories = ({ filterItems, children }) => {
   const [loading, , categories] = useAxios({ url: "/FoodCategory/categories" });
   const renderContent = () => {
     if (loading) return <Loading color={"dark-gray"} />;
     return (
       <div
-        className="d-flex align-items-center bg-white rounded-3 shadow-lg py-4"
+        className="d-flex align-items-center justify-content-between bg-white rounded-3 shadow-lg py-4"
         style={{ height: "60px" }}
       >
         <div className="justify-content-center align-items-center">
@@ -31,6 +31,7 @@ const MenuCategories = ({ filterItems }) => {
             ))}
           </ul>
         </div>
+        {children}
       </div>
     );
   };
@@ -39,6 +40,7 @@ const MenuCategories = ({ filterItems }) => {
 
 MenuCategories.propTypes = {
   filterItems: PropTypes.object.isRequired,
+  children: PropTypes.func.isRequired,
 };
 
 export default MenuCategories;

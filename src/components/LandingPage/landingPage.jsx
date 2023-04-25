@@ -1,4 +1,4 @@
-import hamburger from "../assets/images/hamburger.png";
+import hamburger from "../../assets/images/hamburger.png";
 import "./landingPage.css";
 
 const LandingPage = () => {

@@ -1,4 +1,4 @@
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png"
 import { BsFillCartFill, BsTelephoneFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
 import "./header.css";

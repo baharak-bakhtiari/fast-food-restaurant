@@ -30,7 +30,12 @@ const Menu = () => {
           >
             برای کلیدواژه مورد نظر، آیتمی یافت نشد.
           </div>
-          <img src={notFound} className="mx-auto d-block my-5" alt="notFound" width={"500"} />
+          <img
+            src={notFound}
+            className="mx-auto d-block my-5"
+            alt="notFound"
+            width={"500"}
+          />
         </div>
       );
     return <MenuItems menuItems={menuItems} />;

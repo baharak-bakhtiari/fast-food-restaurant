@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.png";
 import { BsFillCartFill, BsTelephoneFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
 import "./header.css";
@@ -6,21 +6,18 @@ import "./header.css";
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg">
-      <div className="container d-flex justify-content-between">
-        <div className="container d-flex justify-content-start">
+      <div className="container d-flex justify-content-between px-0">
+        <div className="container d-flex justify-content-start px-0">
           <a className="nav-link" href="#cart">
-            <BsFillCartFill />
-            <br />
+            <BsFillCartFill className="nav-icons fs-lg" />
             سبد خرید
           </a>
           <a className="nav-link" href="#menu">
-            <MdRestaurantMenu />
-            <br />
+            <MdRestaurantMenu className="nav-icons fs-lg" />
             منو
           </a>
           <a className="nav-link" href="tel:410-602-5008">
-            <BsTelephoneFill />
-            <br />
+            <BsTelephoneFill className="nav-icons fs-lg" />
             تماس با ما
           </a>
         </div>

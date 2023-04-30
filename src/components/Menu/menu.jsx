@@ -24,10 +24,13 @@ const Menu = () => {
     if (menuItems.length === 0)
       return (
         <div>
-          <div className="alert alert-warning text-center">
+          <div
+            className="alert text-center"
+            style={{ backgroundColor: "#f8d9a0", borderColor: "orange" }}
+          >
             برای کلیدواژه مورد نظر، آیتمی یافت نشد.
           </div>
-          <img src={notFound} className="mx-auto d-block mt-5" alt="notFound" />
+          <img src={notFound} className="mx-auto d-block my-5" alt="notFound" width={"500"} />
         </div>
       );
     return <MenuItems menuItems={menuItems} />;

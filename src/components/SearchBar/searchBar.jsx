@@ -10,7 +10,10 @@ const SearchBar = ({ searchItems }) => {
   };
 
   return (
-    <form onSubmit={submitForm} className="search d-flex align-items-center">
+    <form
+      onSubmit={submitForm}
+      className="search d-flex align-items-center mx-4"
+    >
       <div className="input-group">
         <input
           type="text"

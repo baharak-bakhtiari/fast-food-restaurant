@@ -11,8 +11,8 @@ const LandingPage = () => {
           <p>آدرس: خیابان ولیعصر، جنب بانک ملی</p>
         </div>
         <div className="d-flex justify-content-start ">
-          <button className="btn m-2 rounded-4 buttons">مشاهده منو</button>
-          <button className="btn btn-outline-warning m-2 buttons-outline">
+          <button className="btn m-2 rounded-4 main-button">مشاهده منو</button>
+          <button className="btn m-2 secondary-button">
             تماس با ما
           </button>
         </div>

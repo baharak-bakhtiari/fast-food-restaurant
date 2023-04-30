@@ -8,11 +8,11 @@ const MenuCategories = ({ filterItems, children }) => {
     if (loading) return <Loading color={"dark-gray"} />;
     return (
       <div
-        className="d-flex align-items-center justify-content-between bg-white rounded-3 shadow-lg py-4"
+        className="d-flex align-items-center justify-content-between bg-white rounded-3 shadow-lg mb-5"
         style={{ height: "60px" }}
       >
         <div className="justify-content-center align-items-center">
-          <ul className="nav">
+          <ul className="nav px-0">
             <li className="nav-item" onClick={() => filterItems()}>
               <a href="#." className="nav-link">
                 همه فست فودها

@@ -2,15 +2,24 @@
   max-width: 600px;
 }
 
-.buttons {
+.main-button {
   background-color: orange;
   color: white;
 }
 
-.buttons:hover {
-  background-color: rgba(245, 170, 31, 0.781);
+.secondary-button {
+  border-color: orange;
+  color: orange;
 }
 
-.buttons-outline:hover {
+.main-button:hover {
+  background-color: rgba(243, 164, 18, 0.836);
+  color: white;
+
+}
+
+.secondary-button:hover {
   background-color: orange;
+  color: white;
+
 }

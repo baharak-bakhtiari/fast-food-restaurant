@@ -1,4 +1,4 @@
-import LandingPage from "./components/landingPage/landingPage";
+import LandingPage from "./components/LandingPage/landingPage";
 import Menu from "./components/Menu/menu";
 import Header from "./components/Header/header";
 import "./App.css";

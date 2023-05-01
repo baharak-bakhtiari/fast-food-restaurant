@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuCategories from "../MenuCategories/menuCategories";
 import MenuItems from "../MenuItems/menuItems";
-import useAxios from "../useAxios/useAxios";
+import useAxios from "../../hooks/useAxios/useAxios";
 import Loading from "../Loading/loading";
 import SearchBar from "../SearchBar/searchBar";
 import notFound from "../../assets/images/404.png";

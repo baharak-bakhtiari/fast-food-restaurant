@@ -1,5 +1,5 @@
 import Loading from "../Loading/loading";
-import useAxios from "../useAxios/useAxios";
+import useAxios from "../../hooks/useAxios/useAxios";
 import PropTypes from "prop-types";
 
 const MenuCategories = ({ filterItems, children }) => {

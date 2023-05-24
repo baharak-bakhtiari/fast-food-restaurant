@@ -11,7 +11,7 @@ const SearchBar = ({ searchItems }) => {
 
   return (
     <form
-      onChange={submitForm}
+      onSubmit={submitForm}
       className="search d-flex align-items-center mx-4"
     >
       <div className="input-group">

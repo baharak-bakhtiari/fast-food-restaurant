@@ -1,6 +1,7 @@
 import LandingPage from "./components/LandingPage/landingPage";
 import Menu from "./components/Menu/menu";
 import Header from "./components/Header/header";
+import Comments from "./components/Comments/comments";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <LandingPage />
       <Menu />
+      <Comments />
     </div>
   );
 }

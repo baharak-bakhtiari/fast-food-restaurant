@@ -1,6 +1,7 @@
 import logo from "../../assets/images/logo.png";
 import { BsFillCartFill, BsTelephoneFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
@@ -8,14 +9,14 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg">
       <div className="container d-flex justify-content-between px-0">
         <div className="container d-flex justify-content-start px-0">
-          <a className="nav-link" href="#cart">
-            <BsFillCartFill className="nav-icons fs-lg" />
-            سبد خرید
-          </a>
-          <a className="nav-link" href="#menu">
+          <Link className="nav-link" to="/">
             <MdRestaurantMenu className="nav-icons fs-lg" />
             منو
-          </a>
+          </Link>
+          <Link className="nav-link" to="/cart">
+            <BsFillCartFill className="nav-icons fs-lg" />
+            سبد خرید
+          </Link>
           <a className="nav-link" href="tel:410-602-5008">
             <BsTelephoneFill className="nav-icons fs-lg" />
             تماس با ما

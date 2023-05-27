@@ -1,17 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CartPage from "./components/CartPage/cartPage";
 import LandingPage from "./components/LandingPage/landingPage";
-import Menu from "./components/Menu/menu";
 import Header from "./components/Header/header";
-import Comments from "./components/Comments/comments";
 import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <LandingPage />
-      <Menu />
-      <Comments />
-    </div>
+    <Router>
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

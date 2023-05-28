@@ -3,7 +3,8 @@ import { useAppContext } from "../../context";
 import PropTypes from "prop-types";
 
 const CartItem = ({ item }) => {
-  const { quantity, removeItem, changeQuantity } = useAppContext();
+  const { removeItem, changeQuantity } = useAppContext();
+
   return (
     <div className="d-flex justify-content-between align-items-center mt-3">
       <div className="d-block d-sm-flex align-items-center text-center text-sm-end">
@@ -26,9 +27,9 @@ const CartItem = ({ item }) => {
         <input
           className="form-control"
           type="number"
-          value={quantity}
+          value={item.quantity}
           onChange={(e) =>
-            changeQuantity({ id: item.id, quantity: +e.target.value })
+            changeQuantity({ id: item.id, quantity: e.target.value })
           }
         />
         <button className="btn btn-link text-danger pe-0" type="button">

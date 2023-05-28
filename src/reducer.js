@@ -1,7 +1,8 @@
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_ITEM": {
-      return { ...state, cart: [...state.cart, action.payload] };
+      const newItem = { ...action.payload, theQuantity: 1 };
+      return { ...state, cart: [...state.cart, newItem] };
     }
 
     case "CLEAR_CART": {
@@ -16,22 +17,16 @@ const reducer = (state, action) => {
     }
 
     case "CHANGE_QUANTITY": {
-      const tempCart = state.cart.map((item) => {
-        if (item.id === action.payload.id && action.payload.quantity > 0) {
-          return { ...item, quantity: action.payload.quantity };
-        }
-        return item;
-      });
-      return { ...state, cart: tempCart };
+      return { ...state, cart: action.payload };
     }
 
     case "GET-TOTALS": {
       let { total, quantity } = state.cart.reduce(
         (cartTotal, cartItem) => {
-          const { price, quantity } = cartItem;
-          const itemTotal = price * quantity;
+          const { price, theQuantity } = cartItem;
+          const itemTotal = price * theQuantity;
           cartTotal.total += itemTotal;
-          cartTotal.quantity += quantity;
+          cartTotal.quantity += theQuantity;
           return cartTotal;
         },
         {
@@ -46,6 +41,9 @@ const reducer = (state, action) => {
         quantity,
       };
     }
+
+    default:
+      return state;
   }
 };
 

@@ -9,7 +9,6 @@ const initialState = {
   cart: [],
   total: 0,
   amount: 0,
-  quantity: 1,
 };
 
 const AppProvider = ({ children }) => {
@@ -27,8 +26,15 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "REMOVE_ITEM", payload: id });
   };
 
-  const changeQuantity = (changeObj) => {
-    dispatch({ type: "CHANGE_QUANTITY", payload: changeObj });
+  const changeQuantity = ({ id, quantity }) => {
+    const tempCart = state.cart.map((item) => {
+      if (item.id === id) {
+        return { ...item, theQuantity: quantity };
+      }
+      return item;
+    });
+
+    dispatch({ type: "CHANGE_QUANTITY", payload: tempCart });
   };
 
   useEffect(() => {

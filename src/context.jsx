@@ -1,5 +1,4 @@
 import reducer from "./reducer";
-import cartItems from "./data.js";
 import { createContext, useContext, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 
@@ -7,16 +6,17 @@ const appContext = createContext();
 
 const initialState = {
   loading: false,
-  cart: cartItems,
+  cart: [],
   total: 0,
   amount: 0,
+  quantity: 1,
 };
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const addItem = () => {
-    dispatch({ type: "ADD_ITEM" });
+  const addToCart = ({ menuItem }) => {
+    dispatch({ type: "ADD_ITEM", payload: menuItem });
   };
 
   const clearCart = () => {
@@ -37,7 +37,7 @@ const AppProvider = ({ children }) => {
 
   return (
     <appContext.Provider
-      value={{ ...state, clearCart, removeItem, changeQuantity, addItem }}
+      value={{ ...state, clearCart, removeItem, changeQuantity, addToCart }}
     >
       {children}
     </appContext.Provider>

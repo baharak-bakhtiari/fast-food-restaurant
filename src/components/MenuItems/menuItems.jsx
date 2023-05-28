@@ -6,7 +6,7 @@ const MenuItems = ({ menuItems }) => {
     <div className="row">
       {menuItems.map((menuItem) => (
         <div className="col-md-4 mb-grid-gutter" key={menuItem.id}>
-          <MenuItem {...menuItem} />
+          <MenuItem menuItem={menuItem} />
         </div>
       ))}
     </div>

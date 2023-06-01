@@ -1,5 +1,17 @@
+.hamburger-container {
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .hamburger {
   max-width: 600px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .main-button {
@@ -15,11 +27,9 @@
 .main-button:hover {
   background-color: rgba(243, 164, 18, 0.836);
   color: white;
-
 }
 
 .secondary-button:hover {
   background-color: orange;
   color: white;
-
 }

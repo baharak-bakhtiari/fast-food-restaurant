@@ -1,4 +1,4 @@
-import hamburger from "../../assets/images/hamburger.png";
+import hamburger from "../../assets/images/hero-image.png";
 import Menu from "../Menu/menu";
 import Comments from "../Comments/comments";
 import "./landingPage.css";
@@ -6,7 +6,7 @@ import "./landingPage.css";
 const LandingPage = () => {
   return (
     <>
-      <div className="home-page container d-flex bg-secondary rounded-3 mt-4 p-3">
+      <div className="home-page container d-flex bg-secondary position-relative rounded-3 mt-4 p-3 ">
         <div className="container d-flex row align-items-center justify-content-center gap-0">
           <h1 className="h1">سفارش آنلاین غذا</h1>
           <div>
@@ -20,7 +20,13 @@ const LandingPage = () => {
             <button className="btn m-2 secondary-button">تماس با ما</button>
           </div>
         </div>
-        <img src={hamburger} className="img-fluid hamburger" alt="hamburger" />
+        <div className="hamburger-container">
+          <img
+            src={hamburger}
+            className="d-none d-sm-block hamburger"
+            alt="hamburger"
+          />
+        </div>
       </div>
       <Menu />
       <Comments />

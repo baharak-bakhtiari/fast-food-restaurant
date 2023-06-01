@@ -1,13 +1,28 @@
 .logo {
   max-width: 40px;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1000;
+  margin-left: 1rem;
+}
+
+#navitem:hover,
+#navitem:active,
+#navitem:focus {
+  color: orange;
+}
+
+.cart-label {
+  font-size: 12px;
+  background: orange;
+  color: #48455e;
+  padding: 2px 5px;
+  vertical-align: top;
+  margin-left: -8px;
+  margin-top: -5px;
 }
 
 .nav-icons {
   margin-left: 0.3rem;
-}
-
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-  color: orange;
 }

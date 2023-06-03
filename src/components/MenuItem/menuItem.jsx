@@ -1,6 +1,7 @@
 import { HiShoppingCart } from "react-icons/hi";
 import PropTypes from "prop-types";
 import { useAppContext } from "../../context";
+import "./menuItem.css";
 
 const MenuItem = ({ menuItem }) => {
   const { addToCart } = useAppContext();
@@ -24,7 +25,7 @@ const MenuItem = ({ menuItem }) => {
         </div>
         <button
           onClick={handleAddToCart}
-          className="btn btn-border btn-sm w-100 mt-auto fw-bold"
+          className="btn btn-border btn-sm w-100 mt-auto fw-bold add-to-cart"
           style={{ color: "orange", borderColor: "orange" }}
         >
           <HiShoppingCart className="fs-5 ms-3" />

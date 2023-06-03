@@ -28,6 +28,7 @@ const CartItem = ({ item }) => {
           className="form-control"
           type="number"
           value={item.quantity}
+          min="1"
           onChange={(e) =>
             changeQuantity({ id: item.id, quantity: e.target.value })
           }

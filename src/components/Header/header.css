@@ -9,7 +9,8 @@
 
 #navitem:hover,
 #navitem:active,
-#navitem:focus {
+#navitem:focus,
+#navitem::after {
   color: orange;
 }
 

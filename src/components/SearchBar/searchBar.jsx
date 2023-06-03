@@ -18,7 +18,7 @@ const SearchBar = ({ searchItems }) => {
         <input
           type="text"
           className="form-control rounded-end pe-5 border-warning"
-          placeholder="جستجو"
+          placeholder="..."
           value={value}
           onChange={(event) => setValue(event.target.value)}
         />

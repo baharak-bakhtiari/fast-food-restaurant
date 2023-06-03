@@ -2,6 +2,7 @@ import Loading from "../Loading/loading";
 import useAxios from "../../hooks/useAxios/useAxios";
 import PropTypes from "prop-types";
 import Dropdown from "react-bootstrap/Dropdown";
+import "./menuCategories.css";
 
 const MenuCategories = ({ filterItems, children }) => {
   const [loading, , categories] = useAxios({ url: "/FoodCategory/categories" });
@@ -15,11 +16,16 @@ const MenuCategories = ({ filterItems, children }) => {
             دسته‌بندی فست‌فودها
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item href="#" onClick={() => filterItems()}>
+            <Dropdown.Item
+              id="category-item"
+              href="#"
+              onClick={() => filterItems()}
+            >
               همه فست فودها
             </Dropdown.Item>
             {categories.map((category) => (
               <Dropdown.Item
+                id="category-item"
                 key={category.id}
                 onClick={() => filterItems(category.id)}
               >

@@ -1,0 +1,5 @@
+#category-item:hover,
+#category-item:active,
+#category-item:focus {
+  color: orange;
+}

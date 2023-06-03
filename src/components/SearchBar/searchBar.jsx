@@ -12,13 +12,13 @@ const SearchBar = ({ searchItems }) => {
   return (
     <form
       onSubmit={submitForm}
-      className="search d-flex align-items-center mx-4"
+      className="search d-flex align-items-center m-2"
     >
       <div className="input-group">
         <input
           type="text"
           className="form-control rounded-end pe-5 border-warning"
-          placeholder="جستجوی فست فود ..."
+          placeholder="جستجو"
           value={value}
           onChange={(event) => setValue(event.target.value)}
         />

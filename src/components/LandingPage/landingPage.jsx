@@ -14,18 +14,12 @@ const LandingPage = () => {
             <p>آدرس: خیابان ولیعصر، جنب بانک ملی</p>
           </div>
           <div className="d-flex justify-content-start">
-            <button className="btn m-2 rounded-4 main-button">
-              مشاهده منو
-            </button>
-            <button className="btn m-2 secondary-button">تماس با ما</button>
+            <a className="btn m-2 rounded-4 main-button" href="#menu">مشاهده منو</a>
+            <a className="btn m-2 secondary-button">تماس با ما</a>
           </div>
         </div>
         <div className="pizza-container">
-          <img
-            src={pizza}
-            className="d-none d-sm-block pizza"
-            alt="pizza"
-          />
+          <img src={pizza} className="d-none d-sm-block pizza" alt="pizza" />
         </div>
       </div>
       <Menu />

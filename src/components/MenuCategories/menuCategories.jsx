@@ -8,9 +8,12 @@ const MenuCategories = ({ filterItems, children }) => {
   const [loading, , categories] = useAxios({ url: "/FoodCategory/categories" });
 
   const renderContent = () => {
-    if (loading) return <Loading color={"dark-gray"} />;
+    if (loading) return <Loading color={"dark-gray"}/>;
     return (
-      <div className="d-flex align-items-center justify-content-between bg-white rounded-3 shadow-lg mb-5">
+      <div
+        className="d-flex align-items-center justify-content-between bg-white rounded-3 shadow-lg mb-5"
+        id="menu"
+      >
         <Dropdown>
           <Dropdown.Toggle variant="white" id="dropdownMenuButton">
             دسته‌بندی فست‌فودها

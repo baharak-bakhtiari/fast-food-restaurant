@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsFillCartFill, BsTelephoneFill } from "react-icons/bs";
+import { BsFillCartFill, BsFillChatTextFill } from "react-icons/bs";
 import { MdRestaurantMenu } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
@@ -27,7 +27,7 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link id="navitem" as={Link} to="/">
               <MdRestaurantMenu className="nav-icons fs-lg" />
-              منو
+              صفحه اصلی
             </Nav.Link>
             <Nav.Link id="navitem" as={Link} to="/Cart">
               <span className="cart-label badge badge-warning rounded-circle">
@@ -36,9 +36,9 @@ const Header = () => {
               <BsFillCartFill className="navbar-tool-icon" />
               سبد خرید
             </Nav.Link>
-            <Nav.Link id="navitem" href="tel:410-602-5008">
-              <BsTelephoneFill className="nav-icons fs-lg" />
-              تماس با ما
+            <Nav.Link id="navitem" href="#comments">
+              <BsFillChatTextFill className="nav-icons fs-lg" />
+              نظرات کاربران
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

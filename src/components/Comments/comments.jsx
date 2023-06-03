@@ -48,7 +48,7 @@ const Comments = () => {
   }, [lastComment]);
 
   return (
-    <div className="container pt-5">
+    <div className="container pt-5" id="comments">
       <h3>نظرات کاربران</h3>
       <div className="comments">
         {comments.map((comment, index) => (
